@@ -1,7 +1,7 @@
 # CSE15L Lab Reports 2
 
 **Part1 String Server**<br>
-code part<br>
+**code part**<br>
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -47,7 +47,7 @@ class StringServer {
 ```
 
 
-screenshot1<br>
+**screenshot1**<br>
 <img width="561" alt="cse15l_lab2_sh" src="https://user-images.githubusercontent.com/102566928/215040885-6468acfa-d6c4-42f9-9fa0-67b1e62b45dd.png">
 <br>
 In this screenshot, `handle` and `start` in Server.java file are called. In addition, `handleRequest` and main method in StringServer.java file are called.
@@ -55,7 +55,7 @@ In this screenshot, `handle` and `start` in Server.java file are called. In addi
 
 
 
-screenshot2<br>
+**screenshot2**<br>
 <img width="555" alt="cse15l_lab2_sh2" src="https://user-images.githubusercontent.com/102566928/215041009-0104f431-62af-4132-b74b-3d3e175b1a51.png">
 
 
