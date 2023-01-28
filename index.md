@@ -62,7 +62,7 @@ class StringServer {
 * When the argument is passed into the Hanlder method, `/add-message?s=Good Night` is break down into path + query. First, the method will check whether the value contains the path `/add-message`. If it does, it will extract the query part which is the `?s=Good Night`. Specifically, it will extract two parameters: `s` and the content after equal sign. In this example, the first parameter is 's' and the second one is `Good Night`. Then,`Good Night` will bed added into into the arraylist `word_arr`. If the element is never found in String `output`, then output will concatenate this element with a newline character `\n`. Right now, String `output` contains two words "Good Morning\n" and "Good Night\n". Finally, `output` is returned.
 
 **Part 2 Bug Analysis**<br>
-For this part,I choose bugs from Array Methods.
+I choose bugs from reverseInPlace method in Array Methods part.<br>
 Failure-inducing input:<br>
 ```
 @Test 
@@ -82,4 +82,8 @@ public void testReverseInPlace() {
     assertArrayEquals(new int[]{ 3 }, input1);
 }
 ```
+
+The symptom:<br>
+<img width="807" alt="image" src="https://user-images.githubusercontent.com/102566928/215232789-ba3c64ef-2e77-400d-b31b-931f229c5d49.png">
+
 
