@@ -86,4 +86,24 @@ public void testReverseInPlace() {
 The symptom:<br>
 <img width="807" alt="image" src="https://user-images.githubusercontent.com/102566928/215232789-ba3c64ef-2e77-400d-b31b-931f229c5d49.png">
 
+Code before fixing:<br>
+```
+for(int i = 0; i < arr.length; i += 1) {
+     arr[i] = arr[arr.length - i - 1];
+   }
+}
+```
+Here the bug is that this method traverse the whole array. When half of the elements are swapped, the rest of elements are actually copy the value of first half elements.
+
+Code after fixing:
+```
+for(int i = 0; i < arr.length / 2; i += 1) {
+  int temp  = arr[i];
+  arr[i] = arr[arr.length - i - 1];
+  arr[arr.length - i - 1] = temp;
+} 
+```
+Instead, to reverse the array in place without creating a new array, we only need to traverse half of the elements. During reversing, we can create a temp variable to store the value before swapping and then swap the first and last element until the index i reaches to the value length/2. In this way, we avoid swap repeated elements after i reaching the value length/2. <br>
+
+
 
