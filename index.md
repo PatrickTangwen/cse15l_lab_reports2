@@ -106,7 +106,7 @@ for(int i = 0; i < arr.length / 2; i += 1) {
 Instead of creating a new array, we can reverse the original array in place by traversing only half of its elements. During this process, we can use a temporary variable to store the value of an element before swapping it with its counterpart. By swapping the first and last elements and continuing this process until the index i reaches the value of length/2, we can avoid swapping the same elements more than once.<br>
 
 **Part 3 Reflection**<br>
-In these two weeks, I learned how to analyze the different components of a URL and understand how they work together. Additionally, I learned how to use Junit to locate and resolve bugs in my code. The concepts introduced in week 3 were particularly useful as they shows the importance of testing different inputs to ensure the overall functionality of a program. This taught me that just because a program does not fail with a certain input, it does not necessarily mean that it has no bugs. Therefore, it is crucial to thoroughly test programs with a variety of inputs to ensure they are functioning as we want.
+In these two weeks, I learned how to analyze the different components of a URL and understand how they work together. Additionally, I learned how to use Junit to locate and resolve bugs in my code. The concepts introduced in week 3 were particularly useful as they shows the importance of testing different inputs to ensure the overall functionality of a program. This taught me that just because a program does not fail with a certain input, it does not mean that it has no bugs. Therefore, it is important to test programs with different inputs to ensure they are functioning as we want.
 
 
 
