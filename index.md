@@ -44,7 +44,7 @@ class StringServer {
 ```
 
 
-**//////////////Screenshot1//////////////**<br>
+**          Screenshot1          **<br>
 <img width="561" alt="cse15l_lab2_sh" src="https://user-images.githubusercontent.com/102566928/215040885-6468acfa-d6c4-42f9-9fa0-67b1e62b45dd.png">
 <br>
 What are the relevant arguments to those methods, and the values of any relevant fields of the class?
