@@ -13,9 +13,6 @@ class Handler implements URLHandler {
     ArrayList<String> words_arr = new ArrayList<String>();
     String output = "";
     public String handleRequest(URI url) {
-        // if (url.getPath().startsWith("/add-message")) {
-        //     return output;
-        // }
         System.out.println("Path: " + url.getPath());
         if (url.getPath().contains("/add-message")) {
             String[] parameters = url.getQuery().split("=");
@@ -50,12 +47,21 @@ class StringServer {
 **screenshot1**<br>
 <img width="561" alt="cse15l_lab2_sh" src="https://user-images.githubusercontent.com/102566928/215040885-6468acfa-d6c4-42f9-9fa0-67b1e62b45dd.png">
 <br>
-In this screenshot, `handle` and `start` in Server.java file are called. In addition, `handleRequest` and main method in StringServer.java file are called.
+What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+
+* In this screenshot, `handleRequest` and main method in StringServer.java file are called.
+* The relevant argument is `4700` and `/add-message?s=Good Morning`. The value are Arraylist `words_arr` and String `output`.
+* When the argument is passed into the Hanlder method, `/add-message?s=Good Morning` is break down into path + query. First, the method will check whether the value contains the path `/add-message`. If it does, it will extract the query part which is the `?s=Good Morning`. Specifically, it will extract two parameters: `s` and the content after equal sign. In this example, the first parameter is 's' and the second one is `Good Morning`. Then,`Good Morning` will bed added into into the arraylist `word_arr`. If the element is never found in String `output`, then output will concatenate this element with a newline character `\n`. Finally, `output` is returned.
 
 
 
 
 **screenshot2**<br>
 <img width="555" alt="cse15l_lab2_sh2" src="https://user-images.githubusercontent.com/102566928/215041009-0104f431-62af-4132-b74b-3d3e175b1a51.png">
+<br>
+* In this screenshot, `handleRequest` and main method in StringServer.java file are called.
+* The relevant argument is `4700` and `/add-message?s=Good Morning`. The value are Arraylist `words_arr` and String `output`.
+* When the argument is passed into the Hanlder method, `/add-message?s=Good Night` is break down into path + query. First, the method will check whether the value contains the path `/add-message`. If it does, it will extract the query part which is the `?s=Good Night`. Specifically, it will extract two parameters: `s` and the content after equal sign. In this example, the first parameter is 's' and the second one is `Good Night`. Then,`Good Night` will bed added into into the arraylist `word_arr`. If the element is never found in String `output`, then output will concatenate this element with a newline character `\n`. Right now, String `output` contains two words "Good Morning\n" and "Good Night\n". Finally, `output` is returned.
 
 
