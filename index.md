@@ -59,7 +59,7 @@ class StringServer {
 <br>
 * In this screenshot, `handleRequest` and main method in StringServer.java file are called.
 * The relevant argument is `4700` and `/add-message?s=Good Morning`. The value are Arraylist `words_arr` and String `output`.
-* When the argument is passed into the Hanlder method, `/add-message?s=Good Night` is break down into path + query. First, the method will check whether the value contains the path `/add-message`. If it does, it will extract the query part which is the `?s=Good Night`. Specifically, it will extract two parameters: `s` and the content after equal sign. In this example, the first parameter is 's' and the second one is `Good Night`. Then,`Good Night` will bed added into into the arraylist `word_arr`. If the element is never found in String `output`, then output will concatenate this element with a newline character `\n`. Right now, String `output` contains two words "Good Morning\n" and "Good Night\n". Finally, `output` is returned.
+* When the argument is passed into the Hanlder method, `/add-message?s=Good Night` is break down into path + query. First, the method will check whether the value contains the path `/add-message`. If it does, it will extract the query part which is the `?s=Good Night`. Specifically, it will extract two parameters: `s` and the content after equal sign. In this example, the first parameter is 's' and the second one is `Good Night`. Then,`Good Night` will bed added into into the arraylist `word_arr`. If the element is never found in the String `output`, then output will concatenate this element with a newline character `\n`. Right now, String `output` contains two words "Good Morning\n" and "Good Night\n". Finally, `output` is returned.
 
 **Part 2 Bug Analysis**<br>
 I choose bugs from reverseInPlace method in Array Methods part.<br>
@@ -93,7 +93,7 @@ for(int i = 0; i < arr.length; i += 1) {
    }
 }
 ```
-Here the bug is that this method traverse the whole array. When half of the elements are swapped, the rest of elements are actually copy the value of first half elements.
+Here the bug is that this method traverse the whole array. When half of the elements are swapped, the rest of elements are actually copying the values of first half of the elements.
 
 Code after fixing:
 ```
@@ -103,7 +103,12 @@ for(int i = 0; i < arr.length / 2; i += 1) {
   arr[arr.length - i - 1] = temp;
 } 
 ```
-Instead, to reverse the array in place without creating a new array, we only need to traverse half of the elements. During reversing, we can create a temp variable to store the value before swapping and then swap the first and last element until the index i reaches to the value length/2. In this way, we avoid swap repeated elements after i reaching the value length/2. <br>
+Instead of creating a new array, we can reverse the original array in place by traversing only half of its elements. During this process, we can use a temporary variable to store the value of an element before swapping it with its counterpart. By swapping the first and last elements and continuing this process until the index i reaches the value of length/2, we can avoid swapping the same elements more than once.<br>
 
 **Part 3 Reflection**<br>
-In these two weeks, I learned how to analyze the component of url and how to find and fix bugs using Junit. The terms introduced in week3 is very useful as it teaches me that somes if input that doesn’t induce a failure, it doesn't mean the program has no bug. So,to make sure our programs will work, we should try different inputs to test our programs.
+In these two weeks, I learned how to analyze the different components of a URL and understand how they work together. Additionally, I learned how to use Junit to locate and resolve bugs in my code. The concepts introduced in week 3 were particularly useful as they shows the importance of testing different inputs to ensure the overall functionality of a program. This taught me that just because a program does not fail with a certain input, it does not necessarily mean that it has no bugs. Therefore, it is crucial to thoroughly test programs with a variety of inputs to ensure they are functioning as we want.
+
+
+
+
+
