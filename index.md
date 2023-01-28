@@ -1,7 +1,7 @@
 # CSE15L Lab Reports 2
 
 **Part 1 String Server**<br>
-**code part**<br>
+**Code part**<br>
 ```
 import java.io.IOException;
 import java.net.URI;
